@@ -9,24 +9,9 @@ export function Summary () {
 
     const {transactions} = useContext(TransactionsContext);
 
-    const totalDeposit = transactions.reduce((acc, transaction) => {
-        if (transaction.type == 'deposit') {
-            return acc + transaction.amount;
-        }
-
-        return acc
-    }, 0)
-
-    const totalWithdraw = transactions.reduce((acc, transaction) => {
-        if (transaction.type == 'withdraw') {
-            return acc + transaction.amount
-        }
-
-        return acc
-    }, 0)
-
+   
     const summary = transactions.reduce((acc, transaction) => {
-        if ( transaction.type == 'deposit') {
+        if ( transaction.type === 'deposit') {
             acc.deposits += transaction.amount;
             acc.total += transaction.amount
         } else {

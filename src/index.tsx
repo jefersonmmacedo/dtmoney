@@ -17,7 +17,7 @@ createServer({
           title: 'Desenvolvimento de website',
           category: 'Desenvolvimento',
           type: 'deposit',
-          amount: 1000, //Não seria value?
+          amount: 1000,
           createdAt: new Date('2021-03-02 09:00:00')
         },
         {
@@ -25,13 +25,13 @@ createServer({
           title: 'Aluguel Casa',
           category: 'Contas a pagar',
           type: 'withdraw',
-          amount: 500, //Não seria value?
+          amount: 500,
           createdAt: new Date('2021-03-15 08:00:00')
         }
       ]
     })
   },
-
+  
   routes() {
     this.namespace = 'api';
 
